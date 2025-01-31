@@ -3,158 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Próximamente - GreenRound</title>
-    <style>
-    .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: #25D366;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-    .whatsapp-button:hover {
-        transform: scale(1.1);
-    }
-    .whatsapp-button img {
-        width: 40px;
-        height: 40px;
-    }
-</style>
-
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            overflow-y: auto; /* Permitir scroll en móvil */
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            position: relative;
-            z-index: 2;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            animation: fadeIn 2s ease-in-out;
-        }
-        p {
-            font-size: 1.2rem;
-            animation: fadeIn 3s ease-in-out;
-        }
-        .countdown {
-            font-size: 2rem;
-            font-weight: bold;
-            margin: 20px 0;
-            animation: fadeIn 4s ease-in-out;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 20px;
-            font-size: 1rem;
-            color: white;
-            background: #1b5e20;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #43a047;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fall {
-            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-        }
-        .leaf {
-            position: absolute;
-            top: -10vh;
-            width: 30px;
-            height: 30px;
-            background: url('leaf.png') no-repeat center/contain;
-            animation: fall linear infinite;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            p { font-size: 1rem; }
-            .countdown { font-size: 1.5rem; }
-            .btn { font-size: 0.9rem; padding: 10px 16px; }
-        }
-    </style>
+    <title>GreenRound - Asesoría Ambiental</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="jord-logo.png" alt="GreenRound Logo" width="200">
-        <h1>🌿 ¡Próximamente GreenRound! 🌱</h1>
-        <p>🌍 Estamos trabajando en una plataforma innovadora para la gestión de procesos y certificaciones ambientales. ♻️🌳</p>
-        <div class="countdown" id="countdown"></div>
-        <button class="btn" onclick="showToast()">Ir al Panel Admin</button>
-        <a href="https://wa.me/573126330873" target="_blank" class="whatsapp-button">
-    <img src="whatsapp-icon.png" alt="WhatsApp">
-</a>
-    </div>
-    <script>
-        function countdown() {
-            const launchDate = new Date("2025-02-15T00:00:00").getTime();
-            const interval = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = launchDate - now;
-                if (distance < 0) {
-                    clearInterval(interval);
-                    document.getElementById("countdown").innerHTML = "¡Ya estamos en vivo!";
-                    return;
-                }
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }, 1000);
-        }
-        countdown();
-
-        function showToast() {
-            alert("🌿 GreenRound: Aún no se ha hecho oficial 🌱");
-        }
-        
-        function createLeaves() {
-            for (let i = 0; i < 20; i++) {
-                let leaf = document.createElement('div');
-                leaf.classList.add('leaf');
-                leaf.style.left = Math.random() * 100 + 'vw';
-                leaf.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                leaf.style.animationDelay = (Math.random() * 5) + 's';
-                document.body.appendChild(leaf);
-            }
-        }
-        createLeaves();
-    </script>
+    <header>
+        <img src="logo.png" alt="GreenRound Logo" width="150">
+        <h1>GreenRound - Comprometidos por un Desarrollo Sostenible</h1>
+        <nav>
+            <ul>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#mision">Misión</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#normativas">Normativas</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="perfil">
+        <h2>Perfil</h2>
+        <p>Me he formado en Ingeniería Ambiental, Diplomado en Sistemas de Gestión Integrados HSEQ...</p>
+    </section>
+    
+    <section id="mision">
+        <h2>Misión</h2>
+        <p>Aportar al mejoramiento y crecimiento sostenible de nuestros Clientes con el fomento de una cultura ambientalmente responsable.</p>
+    </section>
+    
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <ul>
+            <li>Revisión Ambiental Inicial</li>
+            <li>Elaboración o actualización de matriz legal ambiental</li>
+            <li>Basura cero – Economía Circular</li>
+            <li>Capacitaciones y talleres</li>
+            <li>Sistema de Gestión Ambiental ISO 14001 - 2015</li>
+            <li>Plan de Gestión Ambiental de EyE</li>
+            <li>Gestión de Residuos No Peligrosos y Peligrosos</li>
+            <li>Uso eficiente y ahorro de energía y agua</li>
+        </ul>
+    </section>
+    
+    <section id="normativas">
+        <h2>Exigencias Normativas</h2>
+        <p>Listado de normativas ambientales relevantes...</p>
+    </section>
+    
+    <section id="beneficios">
+        <h2>Beneficios</h2>
+        <ul>
+            <li>Cumplir los requisitos legales</li>
+            <li>Mejorar el desempeño ambiental</li>
+            <li>Fortalecer la cadena de valor</li>
+            <li>Aportar al crecimiento y sostenibilidad de la compañía</li>
+        </ul>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: gestionesambientales2@gmail.com</p>
+        <p>Teléfono: 312 633 0873</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 GreenRound - Asesoría Ambiental</p>
+    </footer>
 </body>
 </html>
