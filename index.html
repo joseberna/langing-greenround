@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Próximamente - GreenRound</title>
     <style>
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #25D366;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    .whatsapp-button:hover {
+        transform: scale(1.1);
+    }
+    .whatsapp-button img {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+
+
+    <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -90,6 +116,9 @@
         <p>🌍 Estamos trabajando en una plataforma innovadora para la gestión de procesos y certificaciones ambientales. ♻️🌳</p>
         <div class="countdown" id="countdown"></div>
         <button class="btn" onclick="showToast()">Ir al Panel Admin</button>
+        <a href="https://wa.me/573126330873" target="_blank" class="whatsapp-button">
+    <img src="whatsapp-icon.png" alt="WhatsApp">
+</a>
     </div>
     <script>
         function countdown() {
