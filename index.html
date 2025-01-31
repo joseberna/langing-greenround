@@ -51,6 +51,7 @@
             border-radius: 5px;
             margin-top: 20px;
             transition: background 0.3s;
+            cursor: pointer;
         }
         .btn:hover {
             background: #43a047;
@@ -73,7 +74,7 @@
         <h1>¡Próximamente GreenRound!</h1>
         <p>Estamos trabajando en una plataforma innovadora para la gestión de procesos y certificaciones ambientales.</p>
         <div class="countdown" id="countdown"></div>
-        <a href="https://www.app.greenround.com" class="btn">Ir al Panel Admin</a>
+        <button class="btn" onclick="showToast()">Ir al Panel Admin</button>
     </div>
     <script>
         function countdown() {
@@ -94,6 +95,10 @@
             }, 1000);
         }
         countdown();
+
+        function showToast() {
+            alert("Aún no se ha hecho oficial");
+        }
     </script>
 </body>
 </html>
