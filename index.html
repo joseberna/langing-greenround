@@ -17,7 +17,7 @@
             color: white;
             text-align: center;
             padding: 20px;
-            overflow: hidden;
+            overflow-y: auto; /* Permitir scroll en móvil */
         }
         .container {
             max-width: 600px;
@@ -86,8 +86,8 @@
 <body>
     <div class="container">
         <img src="jord-logo.png" alt="GreenRound Logo" width="200">
-        <h1>¡Próximamente GreenRound!</h1>
-        <p>Estamos trabajando en una plataforma innovadora para la gestión de procesos y certificaciones ambientales.</p>
+        <h1>🌿 ¡Próximamente GreenRound! 🌱</h1>
+        <p>🌍 Estamos trabajando en una plataforma innovadora para la gestión de procesos y certificaciones ambientales. ♻️🌳</p>
         <div class="countdown" id="countdown"></div>
         <button class="btn" onclick="showToast()">Ir al Panel Admin</button>
     </div>
@@ -112,7 +112,7 @@
         countdown();
 
         function showToast() {
-            alert("Aún no se ha hecho oficial");
+            alert("🌿 GreenRound: Aún no se ha hecho oficial 🌱");
         }
         
         function createLeaves() {
