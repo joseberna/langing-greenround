@@ -17,6 +17,7 @@
             color: white;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
         }
         .container {
             max-width: 600px;
@@ -60,6 +61,17 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .leaf {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url('leaf.png') no-repeat center/contain;
+            animation: fall linear infinite;
+        }
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
             p { font-size: 1rem; }
@@ -99,6 +111,18 @@
         function showToast() {
             alert("Aún no se ha hecho oficial");
         }
+        
+        function createLeaves() {
+            for (let i = 0; i < 20; i++) {
+                let leaf = document.createElement('div');
+                leaf.classList.add('leaf');
+                leaf.style.left = Math.random() * 100 + 'vw';
+                leaf.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                leaf.style.animationDelay = (Math.random() * 5) + 's';
+                document.body.appendChild(leaf);
+            }
+        }
+        createLeaves();
     </script>
 </body>
 </html>
