@@ -1,178 +1,100 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenRound - Asesoría Ambiental</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #eaf4e3;
-            color: #2e7d32;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #388e3c;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            position: relative;
-        }
-        .admin-button {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            background-color: #fff;
-            color: #388e3c;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-        }
-        footer {
-            background-color: #388e3c;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            font-size: 24px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .leaf {
-            position: absolute;
-            top: -50px;
-            width: 30px;
-            opacity: 0.7;
-            animation: fall 5s linear infinite;
-        }
-        @keyframes fall {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(100vh);
-            }
-        }
-        @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-            footer {
-                position: relative;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>GreenRound - Comprometidos por un Desarrollo Sostenible</h1>
-        <a href="https://www.greenround.pro/admin" class="admin-button">Panel Admin</a>
-        <nav>
-            <ul>
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#mision">Misión</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#normativas">Normativas</a></li>
-                <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="perfil">
-        <h2>Perfil</h2>
-        <p>Me he formado en Ingeniería Ambiental, Diplomado en Sistemas de Gestión Integrados HSEQ, Auditor HSEQ...</p>
-    </section>
-    
-    <section id="mision">
-        <h2>Misión</h2>
-        <p>Aportar al mejoramiento y crecimiento sostenible de nuestros Clientes con el fomento de una cultura ambientalmente responsable.</p>
-    </section>
-    
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Revisión Ambiental Inicial</li>
-            <li>Elaboración o actualización de matriz legal ambiental</li>
-            <li>Basura cero – Economía Circular</li>
-            <li>Capacitaciones y talleres</li>
-            <li>Sistema de Gestión Ambiental ISO 14001 - 2015</li>
-            <li>Plan de Gestión Ambiental de EyE</li>
-            <li>Gestión de Residuos No Peligrosos y Peligrosos</li>
-            <li>Uso eficiente y ahorro de energía y agua</li>
-        </ul>
-    </section>
-    
-    <section id="normativas">
-        <h2>Exigencias Normativas</h2>
-        <p>Listado de normativas ambientales relevantes...</p>
-    </section>
-    
-    <section id="beneficios">
-        <h2>Beneficios</h2>
-        <ul>
-            <li>Cumplir los requisitos legales</li>
-            <li>Mejorar el desempeño ambiental</li>
-            <li>Fortalecer la cadena de valor</li>
-            <li>Aportar al crecimiento y sostenibilidad de la compañía</li>
-        </ul>
-    </section>
-    
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Email: gestionesambientales2@gmail.com</p>
-        <p>Teléfono: 312 633 0873</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 GreenRound - Asesoría Ambiental</p>
-    </footer>
-    
-    <a href="https://wa.me/573126330873" class="whatsapp-button" target="_blank">📲</a>
-    <script>
-        function createLeaf() {
-            const leaf = document.createElement("img");
-            leaf.src = "leaf.png";
-            leaf.className = "leaf";
-            leaf.style.left = Math.random() * window.innerWidth + "px";
-            document.body.appendChild(leaf);
-            setTimeout(() => leaf.remove(), 5000);
-        }
-        setInterval(createLeaf, 1000);
-    </script>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4e3;
+    color: #2e7d32;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #388e3c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.admin-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #fff;
+    color: #388e3c;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #388e3c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leaf {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    opacity: 0.7;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    footer {
+        position: relative;
+    }
+}
